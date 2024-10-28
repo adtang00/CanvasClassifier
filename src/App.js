@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Canvas} from './components/Canvas'
 
-function App() {
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div style = {{display: 'grid',
+      border: "1px solid",
+      justifyContent:'center',
+      cols: '1',       
+      rows: '1',}}>
 
-export default App;
+      <h1 style = {{fontSize:"30px", marginBottom:"0px", display: 'flex'}}> Canvas Classifier </h1>
+      <p style = {{fontSize:'15px'}}>Draw a digit 1-9</p>
+      <Canvas style = {{display:'flex'}}/>
+    </div>
+  ) 
+}
+export default App
